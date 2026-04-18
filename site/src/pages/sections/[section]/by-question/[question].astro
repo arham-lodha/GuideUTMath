@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Prose from '../../../../components/Prose.astro';
+import ResponseCard from '../../../../components/ResponseCard.astro';
+import { getStructuredSections } from '../../../../data/sections';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const section of getStructuredSections()) {
+    for (const q of section.questions) {
+      paths.push({
+        params: { section: section.slug, question: q.id },
+        props: { section, question: q },
+      });
+    }
+  }
+  return paths;
+}
+
+const { section, question } = Astro.props;
+
+const [responses, contributors] = await Promise.all([
+  getCollection('responses'),
+  getCollection('contributors'),
+]);
+
+const contribMap = new Map(contributors.map((c) => [c.id, c]));
+
+// Gather every contributor's answer to this question, in alphabetical order
+// by contributor name. A response that doesn't have this question keyed in
+// its answers map is silently skipped — this matters during a partial
+// rollout when not every contributor has answered every question yet.
+const cards = responses
+  .filter((r) => r.data.section === section.slug)
+  .filter((r) => Boolean(r.data.answers[question.id]?.trim()))
+  .map((r) => {
+    const c = contribMap.get(r.data.contributor);
+    return {
+      contributorSlug: r.data.contributor,
+      contributorName: c?.data.name ?? r.data.contributor,
+      currentPosition: c?.data.now,
+      date: r.data.date,
+      answer: r.data.answers[question.id]!,
+      placeholder: r.data.placeholder || c?.data.placeholder,
+    };
+  })
+  .sort((a, b) => a.contributorName.localeCompare(b.contributorName));
+
+const base = import.meta.env.BASE_URL || '/';
+const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
+
+// Prev/next question for quick navigation.
+const idx = section.questions!.findIndex((q) => q.id === question.id);
+const prev = idx > 0 ? section.questions![idx - 1] : null;
+const next = idx < section.questions!.length - 1 ? section.questions![idx + 1] : null;
+---
+<BaseLayout title={question.prompt}>
+  <Prose>
+    <p class="meta">
+      <a href={`${trimmedBase}/sections/${section.slug}/`}>{section.title}</a>
+      &nbsp;·&nbsp; By question
+    </p>
+
+    <h1>{question.prompt}</h1>
+
+    {question.wordLimit && (
+      <p class="meta"><em>Soft word limit: ~{question.wordLimit} words.</em></p>
+    )}
+
+    <nav class="view-switcher">
+      {prev ? (
+        <a href={`${trimmedBase}/sections/${section.slug}/by-question/${prev.id}/`}>← {prev.prompt}</a>
+      ) : (
+        <span></span>
+      )}
+      {next ? (
+        <a href={`${trimmedBase}/sections/${section.slug}/by-question/${next.id}/`}>{next.prompt} →</a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  </Prose>
+
+  <div style="max-width: var(--content-max);">
+    {cards.length === 0 ? (
+      <Prose>
+        <p><em>No responses yet for this question.</em></p>
+      </Prose>
+    ) : (
+      cards.map((c) => (
+        <ResponseCard
+          contributorName={c.contributorName}
+          contributorSlug={c.contributorSlug}
+          currentPosition={c.currentPosition}
+          date={c.date}
+          sectionSlug={section.slug}
+          answer={c.answer}
+          placeholder={c.placeholder}
+        />
+      ))
+    )}
+  </div>
+</BaseLayout>

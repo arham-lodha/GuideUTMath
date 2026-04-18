@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Prose from '../../components/Prose.astro';
+
+const all = await getCollection('contributors');
+// Sort alphabetically by name.
+all.sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+const base = import.meta.env.BASE_URL || '/';
+const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
+---
+<BaseLayout title="Contributors">
+  <Prose>
+    <h1>Contributors</h1>
+    <p><em>Each contributor writes in their own voice. Advice is attributed and dated; read accordingly.</em></p>
+    <ul class="question-list">
+      {all.map((c) => (
+        <li>
+          <a href={`${trimmedBase}/contributors/${c.id}/`}>{c.data.name}</a>
+          {c.data.now && <span style="color: var(--text-muted);"> — {c.data.now}</span>}
+          {c.data.placeholder && <span style="color: var(--accent);"> · placeholder</span>}
+        </li>
+      ))}
+    </ul>
+  </Prose>
+</BaseLayout>

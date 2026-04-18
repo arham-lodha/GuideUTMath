@@ -1,0 +1,52 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Prose from '../../components/Prose.astro';
+import { sections } from '../../data/sections';
+
+export async function getStaticPaths() {
+  const all = await getCollection('contributors');
+  return all.map((c) => ({ params: { slug: c.id }, props: { entry: c } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Which sections has this contributor written structured responses for?
+const allResponses = await getCollection('responses');
+const theirResponses = allResponses
+  .filter((r) => r.data.contributor === entry.id)
+  .map((r) => {
+    const section = sections.find((s) => s.slug === r.data.section);
+    return { response: r, section };
+  })
+  .filter((x) => x.section);
+
+const base = import.meta.env.BASE_URL || '/';
+const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
+---
+<BaseLayout title={entry.data.name}>
+  <Prose>
+    {entry.data.placeholder && (
+      <div class="placeholder-banner">
+        <strong>Placeholder.</strong> This bio is scaffolding, not a real
+        contributor. Delete this file when a real bio is added.
+      </div>
+    )}
+    <Content />
+    {theirResponses.length > 0 && (
+      <>
+        <h2>Responses</h2>
+        <ul class="question-list">
+          {theirResponses.map(({ section }) => (
+            <li>
+              <a href={`${trimmedBase}/sections/${section!.slug}/by-contributor/${entry.id}/`}>
+                {section!.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+  </Prose>
+</BaseLayout>

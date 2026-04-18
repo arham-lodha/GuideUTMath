@@ -1,0 +1,14 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Prose from '../components/Prose.astro';
+
+const entry = await getEntry('docs', 'CONTRIBUTING');
+if (!entry) throw new Error('Missing CONTRIBUTING.md at repo root.');
+const { Content } = await render(entry);
+---
+<BaseLayout title="Contributing">
+  <Prose>
+    <Content />
+  </Prose>
+</BaseLayout>

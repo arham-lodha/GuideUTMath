@@ -1,0 +1,72 @@
+---
+import { buildNav } from '../lib/nav';
+import ThemeToggle from './ThemeToggle.astro';
+
+type Props = { currentPath?: string };
+const { currentPath = '' } = Astro.props;
+const nav = buildNav();
+
+function isCurrent(href: string) {
+  if (!currentPath) return false;
+  // Treat as current if the path matches exactly (with or without trailing
+  // slash) — avoids "/" matching every page.
+  const a = href.replace(/\/$/, '');
+  const b = currentPath.replace(/\/$/, '');
+  return a === b;
+}
+
+// Prefix a link with Astro's configured base path so the site works under
+// /GuideUTMath/ on GH Pages.
+function withBase(href: string): string {
+  const base = import.meta.env.BASE_URL || '/';
+  const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
+  if (href === '/') return base;
+  return `${trimmedBase}${href}`;
+}
+---
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <a href={withBase('/')}>
+      The Hitchhiker's Guide to UT Math
+      <span class="subtitle">Advice from the 2026 cohort</span>
+    </a>
+  </div>
+
+  <nav aria-label="Primary">
+    <ul>
+      {nav.map((item) => (
+        <li>
+          {item.children ? (
+            <>
+              <span class="group-label">{item.label}</span>
+              <ul class="children">
+                {item.children.map((c) => (
+                  <li>
+                    <a
+                      href={withBase(c.href)}
+                      aria-current={isCurrent(c.href) ? 'page' : undefined}
+                    >
+                      {c.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <a
+              href={withBase(item.href)}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <ThemeToggle />
+    <p style="margin-top: 0.75rem;"><em>Don't Panic.</em></p>
+  </div>
+</aside>

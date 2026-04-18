@@ -1,0 +1,80 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Prose from '../../../../components/Prose.astro';
+import { renderMarkdown } from '../../../../lib/markdown';
+import { sections, getStructuredSections } from '../../../../data/sections';
+
+export async function getStaticPaths() {
+  const responses = await getCollection('responses');
+  const structuredSlugs = new Set(getStructuredSections().map((s) => s.slug));
+  return responses
+    .filter((r) => structuredSlugs.has(r.data.section))
+    .map((r) => ({
+      params: { section: r.data.section, contributor: r.data.contributor },
+      props: { response: r },
+    }));
+}
+
+const { response } = Astro.props;
+const section = sections.find((s) => s.slug === response.data.section)!;
+const contributor = await getEntry('contributors', response.data.contributor);
+
+const base = import.meta.env.BASE_URL || '/';
+const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
+
+// Render each answer through marked + KaTeX. Iterate in the canonical
+// question order from src/data/sections.ts so answers always appear in the
+// same sequence, even if the frontmatter map is written out of order.
+const rendered = (section.questions ?? []).map((q) => ({
+  q,
+  html: renderMarkdown(response.data.answers[q.id] ?? ''),
+  hasAnswer: Boolean(response.data.answers[q.id]?.trim()),
+}));
+
+const name = contributor?.data.name ?? response.data.contributor;
+const now = contributor?.data.now;
+---
+<BaseLayout title={`${name} on ${section.title}`}>
+  <Prose>
+    <h1>{name} on {section.title.toLowerCase()}</h1>
+
+    <p class="meta">
+      <em>
+        Written {response.data.date}
+        {now && <>, now at {now}</>}
+      </em>
+    </p>
+
+    {response.data.placeholder && (
+      <div class="placeholder-banner">
+        <strong>Placeholder.</strong> This response is scaffolding used to
+        demonstrate the template — not a real contribution. Delete this file
+        when a real response is added.
+      </div>
+    )}
+
+    <nav class="view-switcher">
+      <a href={`${trimmedBase}/sections/${section.slug}/`}>← Section</a>
+      <a href={`${trimmedBase}/sections/${section.slug}/by-question/${section.questions![0].id}/`}>View by question →</a>
+    </nav>
+
+    {rendered.map(({ q, html, hasAnswer }) => (
+      <section>
+        <h2 id={q.id}>{q.prompt}</h2>
+        {hasAnswer ? (
+          <div set:html={html} />
+        ) : (
+          <p><em>No answer provided.</em></p>
+        )}
+      </section>
+    ))}
+
+    <hr />
+    <p>
+      <a href={`${trimmedBase}/contributors/${response.data.contributor}/`}>
+        Read {name}'s bio →
+      </a>
+    </p>
+  </Prose>
+</BaseLayout>

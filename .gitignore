@@ -1,0 +1,58 @@
+# ---- OS ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- Editors / IDEs ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ---- Environment / secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Node / JS (covered again in site/.gitignore) ----
+node_modules/
+dist/
+.astro/
+.cache/
+
+# ---- Python (in case stewardship scripts get added) ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- Archives / local working files ----
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# ---- Misc ----
+tmp/
+.tmp/
+.cache/
+coverage/

@@ -1,0 +1,83 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Prose from '../../../components/Prose.astro';
+import { sections } from '../../../data/sections';
+
+export async function getStaticPaths() {
+  return sections.map((s) => ({ params: { section: s.slug }, props: { section: s } }));
+}
+
+const { section } = Astro.props;
+
+// Try to load the section's README. It's optional during scaffolding —
+// sections without one just show their title and a link to contributors.
+const readme = await getEntry('sectionDocs', section.folder);
+const Content = readme ? (await render(readme)).Content : null;
+
+// For structured sections, gather the contributors who've written responses.
+let contributorsForSection: Array<{ slug: string; name: string; now?: string; placeholder?: boolean }> = [];
+if (section.kind === 'structured') {
+  const [responses, contributors] = await Promise.all([
+    getCollection('responses'),
+    getCollection('contributors'),
+  ]);
+  const theirs = responses.filter((r) => r.data.section === section.slug);
+  const contribMap = new Map(contributors.map((c) => [c.id, c]));
+  contributorsForSection = theirs
+    .map((r) => {
+      const c = contribMap.get(r.data.contributor);
+      return c
+        ? { slug: c.id, name: c.data.name, now: c.data.now, placeholder: r.data.placeholder || c.data.placeholder }
+        : { slug: r.data.contributor, name: r.data.contributor, placeholder: r.data.placeholder };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+const base = import.meta.env.BASE_URL || '/';
+const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
+---
+<BaseLayout title={section.title}>
+  <Prose>
+    {Content ? <Content /> : <h1>{section.title}</h1>}
+
+    {section.kind === 'structured' && section.questions && (
+      <>
+        <h2>Views</h2>
+        <p>This section has structured responses. You can read it two ways:</p>
+        <ul class="question-list">
+          <li><strong>By question</strong> — see all contributors' answers to one question side-by-side.</li>
+          <li><strong>By contributor</strong> — read one person's full set of answers.</li>
+        </ul>
+
+        <h3>Questions</h3>
+        <ul class="question-list">
+          {section.questions.map((q) => (
+            <li>
+              <a href={`${trimmedBase}/sections/${section.slug}/by-question/${q.id}/`}>
+                {q.prompt}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {contributorsForSection.length > 0 && (
+          <>
+            <h3>Contributors</h3>
+            <ul class="question-list">
+              {contributorsForSection.map((c) => (
+                <li>
+                  <a href={`${trimmedBase}/sections/${section.slug}/by-contributor/${c.slug}/`}>
+                    {c.name}
+                  </a>
+                  {c.now && <span style="color: var(--text-muted);"> — {c.now}</span>}
+                  {c.placeholder && <span style="color: var(--accent);"> · placeholder</span>}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </>
+    )}
+  </Prose>
+</BaseLayout>
