@@ -24,7 +24,6 @@ You did math, but your center of gravity drifted toward physics, CS, neuroscienc
 ## Masters, not PhD
 
 Either as a stepping stone, a pivot, or because a PhD wasn't the right call. 
-<!-- Examples: Carrie (LSE). See [`sections/08-other-paths/`](../08-other-paths/). -->
 
 <!-- ## Pre-professional / interdisciplinary
 
@@ -33,7 +32,6 @@ The math major is one of several things you're doing, and the combination is wha
 ## Fell out of love with math
 
 This happens, it's not a failure, and it's one of the most underwritten-about paths. 
-<!-- See [`sections/10-real-talk/`](../10-real-talk/) for honest accounts from Prajith and Carrie. -->
 
 ## Paths not represented in this cohort
 
