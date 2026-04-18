@@ -19,7 +19,7 @@ Examples: Arham (number theory / representation theory, landed late, still open 
 
 You did math, but your center of gravity drifted toward physics, CS, neuroscience, or something else, and you're applying to PhDs in that adjacent field rather than pure math.
 
-Examples: Aravind (physics)
+<!-- Examples: Aravind (physics) -->
 
 ## Masters, not PhD
 

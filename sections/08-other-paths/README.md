@@ -6,10 +6,6 @@ Not everyone who majors in math at UT goes into a math PhD, and this guide would
 
 ## What goes here
 
-- Masters programs (Carrie — LSE)
-- Adjacent-field PhDs (Aravind — physics)
-- Graduating early (Prajith)
-- Industry, quant finance, teaching, actuarial, data science — **not yet represented**. If this is you, please write.
 
 ## Format
 

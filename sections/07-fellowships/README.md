@@ -12,9 +12,6 @@
 
 Each fellowship has its own subsection and its own set of questions. Contributors answer in their own voice. Responses sit side-by-side.
 
-Known fellowships applied to in our cohort:
-- NSF GRFP — Arham, Amanda, Aravind
-- [add as contributors come in]
 
 ## NSF GRFP contributor questions
 
