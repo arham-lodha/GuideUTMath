@@ -18,6 +18,7 @@ const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
       {all.map((c) => (
         <li>
           <a href={`${trimmedBase}/contributors/${c.id}/`}>{c.data.name}</a>
+          {c.data.pronouns && <span style="color: var(--text-muted);"> ({c.data.pronouns})</span>}
           {c.data.now && <span style="color: var(--text-muted);"> — {c.data.now}</span>}
           {c.data.placeholder && <span style="color: var(--accent);"> · placeholder</span>}
         </li>

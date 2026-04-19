@@ -22,6 +22,7 @@ const contributors = defineCollection({
   }),
   schema: z.object({
     name: z.string(),
+    pronouns: z.string().optional(),
     graduated: z.string().optional(),
     now: z.string().optional(),
     interests: z.string().optional(),

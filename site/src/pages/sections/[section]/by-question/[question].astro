@@ -8,7 +8,7 @@ import { getStructuredSections } from '../../../../data/sections';
 export async function getStaticPaths() {
   const paths = [];
   for (const section of getStructuredSections()) {
-    for (const q of section.questions) {
+    for (const q of section.questions ?? []) {
       paths.push({
         params: { section: section.slug, question: q.id },
         props: { section, question: q },
@@ -39,6 +39,7 @@ const cards = responses
     return {
       contributorSlug: r.data.contributor,
       contributorName: c?.data.name ?? r.data.contributor,
+      pronouns: c?.data.pronouns,
       currentPosition: c?.data.now,
       date: r.data.date,
       answer: r.data.answers[question.id]!,
@@ -92,6 +93,7 @@ const next = idx < section.questions!.length - 1 ? section.questions![idx + 1] :
         <ResponseCard
           contributorName={c.contributorName}
           contributorSlug={c.contributorSlug}
+          pronouns={c.pronouns}
           currentPosition={c.currentPosition}
           date={c.date}
           sectionSlug={section.slug}
