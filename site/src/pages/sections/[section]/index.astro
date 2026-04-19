@@ -16,7 +16,7 @@ const readme = await getEntry('sectionDocs', section.folder);
 const Content = readme ? (await render(readme)).Content : null;
 
 // For structured sections, gather the contributors who've written responses.
-let contributorsForSection: Array<{ slug: string; name: string; now?: string; placeholder?: boolean }> = [];
+let contributorsForSection: Array<{ slug: string; name: string; pronouns?: string; now?: string; placeholder?: boolean }> = [];
 if (section.kind === 'structured') {
   const [responses, contributors] = await Promise.all([
     getCollection('responses'),
@@ -28,7 +28,13 @@ if (section.kind === 'structured') {
     .map((r) => {
       const c = contribMap.get(r.data.contributor);
       return c
-        ? { slug: c.id, name: c.data.name, now: c.data.now, placeholder: r.data.placeholder || c.data.placeholder }
+        ? {
+            slug: c.id,
+            name: c.data.name,
+            pronouns: c.data.pronouns,
+            now: c.data.now,
+            placeholder: r.data.placeholder || c.data.placeholder,
+          }
         : { slug: r.data.contributor, name: r.data.contributor, placeholder: r.data.placeholder };
     })
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -70,6 +76,7 @@ const trimmedBase = base.endsWith('/') ? base.slice(0, -1) : base;
                   <a href={`${trimmedBase}/sections/${section.slug}/by-contributor/${c.slug}/`}>
                     {c.name}
                   </a>
+                  {c.pronouns && <span style="color: var(--text-muted);"> ({c.pronouns})</span>}
                   {c.now && <span style="color: var(--text-muted);"> — {c.now}</span>}
                   {c.placeholder && <span style="color: var(--accent);"> · placeholder</span>}
                 </li>

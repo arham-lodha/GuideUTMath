@@ -4,6 +4,7 @@ import { renderMarkdown } from '../lib/markdown';
 type Props = {
   contributorName: string;
   contributorSlug: string;
+  pronouns?: string;
   currentPosition?: string;
   date: string;
   sectionSlug: string;
@@ -14,6 +15,7 @@ type Props = {
 const {
   contributorName,
   contributorSlug,
+  pronouns,
   currentPosition,
   date,
   sectionSlug,
@@ -31,6 +33,7 @@ const html = renderMarkdown(answer);
   <header class="card-header">
     <span class="who">
       <a href={linkHref}>{contributorName}</a>
+      {pronouns && <span class="position"> ({pronouns})</span>}
       {currentPosition && <span class="position"> · {currentPosition}</span>}
       {placeholder && <span class="position"> · placeholder</span>}
     </span>

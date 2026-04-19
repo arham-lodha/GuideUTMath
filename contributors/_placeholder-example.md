@@ -1,5 +1,6 @@
 ---
 name: Example Placeholder
+pronouns: "they/them"
 graduated: "YYYY"
 now: "Placeholder — not a real contributor"
 interests: "—"
@@ -15,6 +16,7 @@ placeholder: true
 
 *This file exists only to demonstrate the contributor bio template. It is not a real person. Delete this file once at least one real contributor bio is in place.*
 
+**Pronouns:** they/them
 **Graduated:** YYYY
 **Now:** Placeholder — not a real contributor
 **Interests:** —
