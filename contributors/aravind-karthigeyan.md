@@ -22,7 +22,7 @@ lastUpdated: "April 20, 2026"
 
 ## Path in two sentences
 
-I was always interested in both physics and math aiming for a high-energy theory or mathematical physics PHD.
+I was always interested in both physics and math, and early on I imagined myself heading toward high-energy theory or mathematical physics, but high-energy was badly funded and there was barely any way to get started with it as an undergrad.
 
 I started out more physics-heavy, and as I dwindled down on undergraduate physics coursework, I started focusing more on pure math while taking graduate physics and CS courses.
 

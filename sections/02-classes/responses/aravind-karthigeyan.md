@@ -14,6 +14,8 @@ answers:
 
     Senior: algebra (thesis, solid-state 2, DFT).
 
+    I started out pretty physics-heavy as I wanted to take graduate coursework there rather quickly. I also wasn't a math major till my sophomore year and didn't really know how mathematically mature I was, so I took a lot of intro math classes to ease my transition. I figured I was interested in quantum info and topological condensed matter theory, so I took, well, topology and algebra and their prereqs as the most useful ones. QCT I took because I liked Aaronson a lot and wanted to do a project for the class, and I was mathematically mature by that time, which said class did require.
+
   most-taught: |
     Which class taught you the most, and why? (~200 words)
 

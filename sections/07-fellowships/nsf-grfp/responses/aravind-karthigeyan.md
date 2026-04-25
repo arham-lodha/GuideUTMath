@@ -27,7 +27,7 @@ Just my PI. I made 5 drafts where I emphasized different styles by looking at su
 
 ## What would you do differently? (~200 words)
 
-As of now, I haven't gotten reviews and I won, so idk?
+I lowkey didn't have anyone read it other than my PI. N = 1, but I was evidently justified in thinking my ideas themselves are eloquent, interesting, and whatnot. My writing style wasn't the best. I'm not one of those people who're capable of making beautiful prose or anything really. I just did the minimal stuff in that regard. I had good ideas and a good background. I emphasized that. Perhaps got lucky? Who knows.
 
 ## Advice to a junior thinking about applying in the fall. (~200 words)
 

@@ -6,12 +6,12 @@ answers:
   first-relationship: |
     How did your first real relationship with a UT professor start? (~200 words)
 
-    My first relationship with a professor started after I cold-emailed them and started to do research with them properly.
+    My first relationship with a professor started after I cold-emailed them and started to do research with them properly. I basically sent a short email saying I was interested in condensed matter and wanted to learn more, and that I was willing to start small. After that, I started sitting in on group meetings and watching student lectures and eventually did experiments and led some of the group meetings, before switching groups and having to do all of this over and over again.
 
   reading-course-format: |
     Reading courses: how did yours work? (~250 words)
 
-    I did a reading course in the physics department with a PI/mentor. I read some papers related to his research, namely topological band theory.
+    I did a reading course in the physics department with a PI/mentor. I read papers related to his research, namely topological band theory. It was pretty informal, mostly reading papers, meeting to talk through them, asking questions when I got stuck, and using that to build enough background to understand the research direction better. I assume math is isomorphic. Tho they def do not need to be your PI.
 
   letter-writers: |
     Who wrote your grad school letters, and how did you pick them? (~200 words)
