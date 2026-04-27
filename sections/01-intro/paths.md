@@ -21,7 +21,7 @@ You did math, but your center of gravity drifted toward physics, CS, neuroscienc
 
 <!-- Examples: Aravind (physics) -->
 
-## Masters, not PhD
+## Master's, not PhD
 
 Either as a stepping stone, a pivot, or because a PhD wasn't the right call. 
 
