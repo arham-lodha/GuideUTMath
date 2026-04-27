@@ -23,4 +23,4 @@ Individual essays, 800–1500 words, in your own voice. Suggested structure belo
 
 ## A note on framing
 
-These aren't consolation-prize paths. They're paths. Please write them that way. A masters or a pivot to a different field isn't a bad thing, it's a considered choice that a real person made, and a future reader trying to decide what to do with their own life deserves to hear it told straight.
+These aren't consolation-prize paths. They're paths. Please write them that way. A master's or a pivot to a different field isn't a bad thing, it's a considered choice that a real person made, and a future reader trying to decide what to do with their own life deserves to hear it told straight.
