@@ -10,7 +10,7 @@ It exists because the information was always there — scattered across Discord 
 
 ## Who wrote it
 
-The initial (2026) cohort includes three NSF GRFP recipients, and people going to PhD programs at UCLA, Princeton/Harvard/Stanford/Chicago, Duke, Utah, A&M, amd UIUC — along with people who decided math wasn't the path for them and are doing something else. You can read short bios of contributors in [`contributors/`](./contributors/).
+The initial (2026) cohort includes three NSF GRFP recipients, and people going to PhD programs at UCLA, Princeton/Harvard/Stanford/Chicago, Duke, Utah, A&M, and UIUC — along with people who decided math wasn't the path for them and are doing something else. You can read short bios of contributors in [`contributors/`](./contributors/).
 
 Every piece of advice in this guide is attributed and dated. Advice from 2026 about the math GRE may not apply in 2029. Read accordingly.
 
