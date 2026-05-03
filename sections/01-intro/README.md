@@ -12,7 +12,7 @@ This section exists so that a reader can quickly find someone whose trajectory r
 
 Most advice documents implicitly flatten a lot of different paths into one "success track." This one shouldn't. A reader landing here should immediately see that:
 
-- People who came in knowing what math they loved (Dominic, Angela) and people who figured it out in grad-app season (Arham) both ended up fine.
+- People who came in knowing what math they loved (Dominick) and people who figured it out in grad-app season (Arham) both ended up fine.
 - Pure math PhD is one path; adjacent-field PhD (Aravind → physics), masters programs (Carrie → LSE), and interdisciplinary routes are equally legitimate.
 - Falling out of love with math is a real outcome, not a failure, and we have contributors who can speak to it honestly.
 
