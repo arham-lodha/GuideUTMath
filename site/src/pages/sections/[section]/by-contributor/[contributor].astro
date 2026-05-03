@@ -33,6 +33,7 @@ const rendered = (section.questions ?? []).map((q) => ({
 }));
 
 const name = contributor?.data.name ?? response.data.contributor;
+const pronouns = contributor?.data.pronouns;
 const now = contributor?.data.now;
 ---
 <BaseLayout title={`${name} on ${section.title}`}>
@@ -41,6 +42,7 @@ const now = contributor?.data.now;
 
     <p class="meta">
       <em>
+        {pronouns && <>{pronouns} · </>}
         Written {response.data.date}
         {now && <>, now at {now}</>}
       </em>

@@ -4,6 +4,7 @@
 # your bio page and to show your name + current position on per-question view
 # cards. The prose body is yours — write it however you want.
 name: "Your Name"
+pronouns: "your pronouns"
 graduated: "YYYY"
 now: "Where you are and what you're doing"
 interests: "Your mathematical interests, or what you're into now"
@@ -18,6 +19,7 @@ lastUpdated: "Month Year"
 
 *Last updated: [Month Year]*
 
+**Pronouns:** [your pronouns]
 **Graduated:** [Year]
 **Now:** [Where you are and what you're doing — "UCLA Math PhD," "LSE Masters in X," "Comp neuro lab at Y"]
 **Interests:** [Your mathematical interests, or what you're into now if math isn't it]
