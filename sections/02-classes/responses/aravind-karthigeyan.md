@@ -1,48 +1,39 @@
----
-contributor: aravind-karthigeyan
-section: classes
-date: "April 2026"
-answers:
-  course-sequence: |
-    What was your rough course sequence, and how did you land on it? (~250 words)
+# Aravind Karthigeyan on classes
 
-    Freshman: diff eq, vector calc, honors lin alg (quantum).
+*Written April 2026, graduated Fall 2025, now at UIUC Theoretical Physics PhD.*
 
-    Sophomore: number theory, complex analysis, numerical analysis (quantum 2, classical, stat mech).
+## What was your rough course sequence, and how did you land on it? (~250 words)
 
-    Junior: analysis, topology, QIS, quantum complexity theory (electro, solid-state, spectroscopy).
+Freshman: diff eq, vector calc, honors lin alg (quantum).
 
-    Senior: algebra (thesis, solid-state 2, DFT).
+Sophomore: number theory, complex analysis, numerical analysis (quantum 2, classical, stat mech).
 
-    I started out pretty physics-heavy as I wanted to take graduate coursework there rather quickly. I also wasn't a math major till my sophomore year and didn't really know how mathematically mature I was, so I took a lot of intro math classes to ease my transition. I figured I was interested in quantum info and topological condensed matter theory, so I took, well, topology and algebra and their prereqs as the most useful ones. QCT I took because I liked Aaronson a lot and wanted to do a project for the class, and I was mathematically mature by that time, which said class did require.
+Junior: analysis, topology, QIS, quantum complexity theory (electro, solid-state, spectroscopy).
 
-  most-taught: |
-    Which class taught you the most, and why? (~200 words)
+Senior: algebra (thesis, solid-state 2, DFT).
 
-    Quantum complexity theory. Scott's knowledge was like a firehose and I was seriously enough outside my comfort zone taking a grad CS course with a lot of grad CS students. The course definitely required some knowledge of algebra, analysis, and arguably some of the projects use alg geo, combo, alg top, etc. The vibes of the class were also really good. A lot of information all at once.
+I started out pretty physics-heavy as I wanted to take graduate coursework there rather quickly. I also wasn't a math major till my sophomore year and didn't really know how mathematically mature I was, so I took a lot of intro math classes to ease my transition. I figured I was interested in quantum info and topological condensed matter theory, so I took, well, topology and algebra and their prereqs as the most useful ones. QCT I took because I liked Aaronson a lot and wanted to do a project for the class, and I was mathematically mature by that time, which said class did require.
 
-  wish-earlier: |
-    Which class do you wish you'd taken, or taken earlier? (~150 words)
+## Which class taught you the most, and why? (~200 words)
 
-    Topology. It was a fun class. I had it with Dr. Miller, and still would have wanted to have it with her, but ideally somewhat earlier.
+Quantum complexity theory. Scott's knowledge was like a firehose and I was seriously enough outside my comfort zone taking a grad CS course with a lot of grad CS students. The course definitely required some knowledge of algebra, analysis, and arguably some of the projects use alg geo, combo, alg top, etc. The vibes of the class were also really good. A lot of information all at once.
 
-  wish-later: |
-    Which class do you wish you hadn't taken, or taken later? (~150 words)
+## Which class do you wish you'd taken, or taken earlier? (~150 words)
 
-    Number theory. It just delayed me. IBL, I guess? But boring.
+Topology. It was a fun class. I had it with Dr. Miller, and still would have wanted to have it with her, but ideally somewhat earlier.
 
-  grad-courses: |
-    Grad courses as an undergrad: when and why? (~200 words)
+## Which class do you wish you hadn't taken, or taken later? (~150 words)
 
-    Quantum complexity was the math-adjacent one. The three others were proper physics.
+Number theory. It just delayed me. IBL, I guess? But boring.
 
-  reading-courses: |
-    Reading courses: did you do them, how did they work? (~200 words)
+## Grad courses as an undergrad: when and why? (~200 words)
 
-    I did a reading course in the physics department with a PI/mentor. I read some papers related to his research, namely topological band theory.
+Quantum complexity was the math-adjacent one. The three others were proper physics.
 
-  tactical-advice: |
-    One piece of tactical advice about coursework. (~100 words)
+## Reading courses: did you do them, how did they work? (~200 words)
 
-    Sometimes get out of your comfort zone. Get a bit wild and crazy. You'll grow quite a bit then.
----
+I did a reading course in the physics department with a PI/mentor. I read some papers related to his research, namely topological band theory.
+
+## One piece of tactical advice about coursework. (~100 words)
+
+Sometimes get out of your comfort zone. Get a bit wild and crazy. You'll grow quite a bit then.

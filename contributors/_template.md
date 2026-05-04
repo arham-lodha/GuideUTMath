@@ -26,7 +26,7 @@ lastUpdated: "Month Year"
 
 ## Path in two sentences
 
-[Two sentences. What shape did your undergrad take, and where did it land you? Example: "Came in undecided, took a graduate algebra class as a freshman that nearly broke me, spent sophomore year questioning everything, found number theory junior year after an REU. Applied to 12 PhD programs, went to UCLA."]
+[Short blurb. What shape did your undergrad take, and where did it land you? Example: "Came in undecided, took a graduate algebra class as a freshman that nearly broke me, spent sophomore year questioning everything, found number theory junior year after an REU. Applied to 12 PhD programs, went to UCLA."]
 
 ## Ask me about
 

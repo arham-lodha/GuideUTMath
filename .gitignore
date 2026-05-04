@@ -31,12 +31,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# ---- Node / JS (covered again in site/.gitignore) ----
-node_modules/
-dist/
-.astro/
-.cache/
-
 # ---- Python (in case stewardship scripts get added) ----
 __pycache__/
 *.py[cod]

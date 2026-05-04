@@ -12,7 +12,7 @@ The steward is the person who keeps the guide alive between cohorts. Concretely:
 
 - Reviews and merges contributions (light editing for formatting, typos, broken links — not voice)
 - Drafts synthesized sections when there are enough contributor responses to do so
-- Maintains the repo, the site, and the contributor list
+- Maintains the repo and the contributor list
 - Runs the annual ritual: reminding the graduating cohort to contribute, soliciting from the current cohort, updating the "paths not represented" list
 - Hands off to a successor before graduating
 
@@ -25,7 +25,7 @@ The steward is **not**:
 
 Based on the 2026 cohort's experience:
 
-- Initial setup (structure, templates, site): one intense week, then a long tail
+- Initial setup (structure, templates): one intense week, then a long tail
 - Each annual cycle: a few hours across the spring semester for outreach and collection, a weekend to synthesize and publish
 - Handoff: a semester of shadowing by the incoming steward
 
