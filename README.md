@@ -1,7 +1,5 @@
 # The Hitchhiker's Guide to UT Math
 
-*A living guide to the UT Austin math major, written by the people who just finished it.*
-
 ## What this is
 
 This is a collection of advice, experience, and hard-won knowledge from UT Austin math majors, written for the ones coming up behind us. It covers classes, research, professors, graduate school applications, fellowships, study abroad, and the stuff nobody usually talks about — burnout, doubt, and what it looks like to fall in and out of love with math.

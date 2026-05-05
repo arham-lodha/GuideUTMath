@@ -4,7 +4,7 @@
 
 ## What goes here
 
-- **Dean's Scholars** as a math major (the bio/chem-coded programming problem, making the thesis work for math, whether it's worth it)
+- **Dean's Scholars** as a math major 
 - **Polymath Scholars**, if any contributors did it
 - **Math department honors and honors thesis mechanics** (including for students *not* in Dean's Scholars)
 - **Plan II** interactions, if relevant

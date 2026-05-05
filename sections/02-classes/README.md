@@ -4,7 +4,7 @@
 
 ## What goes here
 
-- Course sequencing for different trajectories (pure math grad school, applied, adjacent fields, unsure)
+- Course sequencing for different trajectories (math grad school, adjacent fields, unsure)
 - The hard classes: honors algebra, honors analysis, the grad sequences — which to take when, what they assume, what they reward
 - Reading courses and independent study
 - When (and whether) to take graduate courses as an undergrad

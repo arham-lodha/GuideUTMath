@@ -2,7 +2,7 @@
 
 **Format:** structured responses (same questions, individual voice, attributed), with a short synthesized timeline up front.
 
-This is likely the most-read section of the guide. The point is not to give one answer to the question "how do you apply to math PhD programs" but to let a reader see how six or seven different people who all ended up at strong programs actually thought through the process — including where they disagree.
+This is likely the most-read section of the guide. The point is not to give one answer to the question "how do you apply to math PhD programs" but to let a reader see how different people who all ended up at strong programs actually thought through the process — including where they disagree.
 
 ## What goes here
 
