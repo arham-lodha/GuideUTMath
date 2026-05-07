@@ -8,7 +8,7 @@ asks:
   - "Topological phases, Berry curvature, and geometric invariants"
   - "Equivariant K-theory, characteristic classes, and symmetry in condensed matter"
   - "Theoretical physics PhD applications"
-contact: "ak162@illinois.edu"
+contact: "ak162 (at) illinois (dot) edu"
 lastUpdated: "April 20, 2026"
 ---
 
@@ -35,4 +35,4 @@ I started out more physics-heavy, and as I dwindled down on undergraduate physic
 
 ## Contact
 
-ak162@illinois.edu
+ak162 (at) illinois (dot) edu
