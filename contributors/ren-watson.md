@@ -26,7 +26,7 @@ lastUpdated: "May 2026"
 
 ## Path in two sentences
 
-I came in interested in pure math, became interested in combinatorics through an REU after my freshman year, and went to Budapest Semesters in Mathematics my sophomore spring to study more combinatorics. My second two REUs were in combinatorial number theory and confirmed my secondary research interest in number theory, and I applied to 20 math PhD programs and went to UW-Madison on an NSF Fellowship.
+I came into undergrad interested in pure math, became interested in combinatorics through an REU after my freshman year, and went to Budapest Semesters in Mathematics my sophomore spring to study more combinatorics. My second two REUs were in combinatorial number theory and confirmed my secondary research interest in number theory, and I applied to 20 math PhD programs and went to UW-Madison on an NSF Fellowship.
 
 ## Ask me about
 
