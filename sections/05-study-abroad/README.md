@@ -8,6 +8,7 @@ Narrative accounts of study-abroad experiences relevant to math majors — what 
 
 Known programs in our cohort:
 - **ETH Zürich** — Arham
+- **Budapest Semesters in Mathematics** — Ren
 - [add as contributors come in]
 
 ## Format
